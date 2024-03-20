@@ -1,7 +1,5 @@
 import logo from "@/assets/images/logo.svg";
 import "@/assets/styles/components/header.scss";
-import "@/assets/styles/components/textVisualizer.scss";
-import "@/assets/styles/components/textArea.scss";
 
 function Header() {
   return (
