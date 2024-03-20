@@ -1,3 +1,14 @@
 @use 'resets';
 @use 'utils';
 @use 'globals';
+
+#root {
+  display: grid;
+  row-gap: 64px;
+  align-items: stretch;
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: auto 1fr 400px;
+    column-gap: 80px;
+  }
+}

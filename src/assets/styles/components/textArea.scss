@@ -1,0 +1,36 @@
+.textArea__button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.textArea__text {
+  width: 100%;
+  min-height: 288px;
+  resize: vertical;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
+  background-color: transparent;
+  color: rgba(10, 56, 113, 1);
+  border: none;
+}
+
+.textArea__note {
+  margin-top: 64px;
+  margin-bottom: 16px;
+  padding-left: 24px;
+  font-size: 12px;
+  opacity: 80%;
+  color: rgba(73, 80, 87, 1);
+  background-image:url(assets/images/exclamationcircle.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
