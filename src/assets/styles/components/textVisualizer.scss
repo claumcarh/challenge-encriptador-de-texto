@@ -1,14 +1,44 @@
 .textVisualizer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
   border-radius: 32px;
   background: #FFFFFF;
   padding: 32px;
+  box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+
+  @media screen and (min-width: 1440px) {
+    min-height: 944px;
+  }
 }
 
 .textVisualizer__logo {
   display: none;
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+    width: 336px;
+    height: 304px;
+  }
+}
+
+.textVisualizer__text1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.8px;
+  text-align: center;
+}
+
+.textVisualizer__text2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(73, 80, 87, 1);
 }
 
 .botonCopiarTexto {
   border-radius: 32PX;
 }
-
