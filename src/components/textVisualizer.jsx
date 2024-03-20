@@ -1,9 +1,15 @@
+import Button from './button';
 import muneco from '@/assets/images/muneco.png';
+import "@/assets/styles/components/textVisualizer.scss";
 
- const encryptedText = '';
-// const encryptedText = 'Lorem ipsum dolor sit amet consectetur adipiscing elit Orci montes sit et diam risus scelerisque vitae est Tortor maecenas nunc ut laoreet Eget diam mauris quam quisque ut eget fringilla sit elit Libero sodales duis fames id diam feugiat aliquet non egestas';
+function TextVisualizer({ encryptedText }) {
+  async function handleCopy() {
+    try {
+      await navigator.clipboard.writeText(encryptedText);
+    } catch (error) {
+    }
+  }
 
-function TextVisualizer() {
   return (
     <div className="textVisualizer">
       {!encryptedText ? (
@@ -13,15 +19,15 @@ function TextVisualizer() {
             src={muneco}
             alt=""
           />
-          <p>Ningún mensaje fue encontrado</p>
-          <p>Ingresa el texto que desees encriptar o desencriptar</p>
+          <p className="textVisualizer__text1">Ningún mensaje fue encontrado</p>
+          <p className="textVisualizer__text2">Ingresa el texto que desees encriptar o desencriptar</p>
         </>
       ) : (
         <>
           <p>
             {encryptedText}
           </p>
-          <button className="botonCopiarTexto">Copiar</button>
+          <Button onClick={() => handleCopy() }>Copiar</Button>
         </>
       )}
     </div>
